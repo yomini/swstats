@@ -1,0 +1,13 @@
+설치한 라이브러리
+ - pip 최신버전으로 업그레이드
+ - setuptools 최신버전 업그레이드 (pip install --user --upgrade setuptools)
+ - beautifulsoup4 설치
+ - lxml 설치 (parsing을 위한 라이브러리)
+ - matplotlib -> cycler, kiwisolver, matplotlib, numpy, pyparsing, python-deteutil 설치됨
+ - seaborn -> seaborn, pandas, pytz 설치됨
+ - requests 라이브러리 설치
+ - selenium 설치(by minnie)
+ - requests 설치(by minnie)
+ - chromedriver 설치 (최신버전) - 셀리니움 사용 위함
+ - https://phantomjs.org/download.html 설치 (selenium사용위함)
+ - mysqlclient 라이브러리 설치 (오류 시 알아서 해결)

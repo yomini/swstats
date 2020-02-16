@@ -1,0 +1,29 @@
+{% extends 'base.html' %} <!--상속받기-->
+{%block title%}Poll list{%endblock%}
+
+{% block content %}
+
+<div class="container">
+    <h2>Fun polls</h2>
+    <p>polls/list.html</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Q.</td>
+                <td>Date</td>
+            </tr>
+        </thead>
+        {% for q in qs %}
+        <tr>
+            <td width="5%">{{q.id}}</td>  <!--views.py에서 받은 함수-->
+            <td width="50%"><a href="{% url 'polls:detail' q.id %}">{{q.question_text}}</a></td>
+            <td width="30%">{{q.pub_date}}</td>
+        </tr>
+        {% endfor %}
+
+    </table>
+</div>
+
+<a href="{%url 'polls:list' %}">Go back</a>
+{%endblock%}

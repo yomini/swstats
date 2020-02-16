@@ -1,0 +1,13 @@
+{% extends 'base.html'%}
+{%block title%}설문관리{%endblock%}
+{%block content%}
+<h2>polls/vote.html</h2>
+<p/>
+<div>{{q.question_text}}</div>
+<p/>
+{% for c in q.choice_set.all %}
+{{c.choice_text}}
+{{c.votes}}
+{% endfor %}
+<a href="{% url 'polls:detail' q.id %}">vote again</a>
+{%endblock%}

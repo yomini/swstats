@@ -1,0 +1,23 @@
+[INFO  - 2020-02-09T12:35:51.146Z] GhostDriver - Main - running on port 56275
+[INFO  - 2020-02-09T12:35:55.607Z] Session [b76edfd0-4b38-11ea-a63b-751ffe987ecc] - page.settings - {"XSSAuditingEnabled":false,"javascriptCanCloseWindows":true,"javascriptCanOpenWindows":true,"javascriptEnabled":true,"loadImages":true,"localToRemoteUrlAccessEnabled":false,"userAgent":"Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/538.1 (KHTML, like Gecko) PhantomJS/2.1.1 Safari/538.1","webSecurityEnabled":true}
+[INFO  - 2020-02-09T12:35:55.607Z] Session [b76edfd0-4b38-11ea-a63b-751ffe987ecc] - page.customHeaders:  - {}
+[INFO  - 2020-02-09T12:35:55.607Z] Session [b76edfd0-4b38-11ea-a63b-751ffe987ecc] - Session.negotiatedCapabilities - {"browserName":"phantomjs","version":"2.1.1","driverName":"ghostdriver","driverVersion":"1.2.0","platform":"windows-10-32bit","javascriptEnabled":true,"takesScreenshot":true,"handlesAlerts":false,"databaseEnabled":false,"locationContextEnabled":false,"applicationCacheEnabled":false,"browserConnectionEnabled":false,"cssSelectorsEnabled":true,"webStorageEnabled":false,"rotatable":false,"acceptSslCerts":false,"nativeEvents":true,"proxy":{"proxyType":"direct"}}
+[INFO  - 2020-02-09T12:35:55.607Z] SessionManagerReqHand - _postNewSessionCommand - New Session Created: b76edfd0-4b38-11ea-a63b-751ffe987ecc
+[ERROR - 2020-02-09T12:35:57.160Z] Session [b76edfd0-4b38-11ea-a63b-751ffe987ecc] - page.onError - msg: ReferenceError: Can't find variable: Map
+
+  phantomjs://platform/console++.js:263 in error
+[ERROR - 2020-02-09T12:35:57.161Z] Session [b76edfd0-4b38-11ea-a63b-751ffe987ecc] - page.onError - stack:
+  (anonymous function) (https://www.xe.com/themes/xe/js/react/commons.4fd066668c88903b736b.min.js:50)
+  o (https://www.xe.com/themes/xe/js/react/converter.0ac411d7a1f6b0278202.min.js:1)
+  (anonymous function) (https://www.xe.com/themes/xe/js/react/commons.4fd066668c88903b736b.min.js:1)
+  o (https://www.xe.com/themes/xe/js/react/converter.0ac411d7a1f6b0278202.min.js:1)
+  (anonymous function) (https://www.xe.com/themes/xe/js/react/converter.0ac411d7a1f6b0278202.min.js:11)
+  o (https://www.xe.com/themes/xe/js/react/converter.0ac411d7a1f6b0278202.min.js:1)
+  (anonymous function) (https://www.xe.com/themes/xe/js/react/converter.0ac411d7a1f6b0278202.min.js:31)
+  o (https://www.xe.com/themes/xe/js/react/converter.0ac411d7a1f6b0278202.min.js:1)
+  (anonymous function) (https://www.xe.com/themes/xe/js/react/converter.0ac411d7a1f6b0278202.min.js:31)
+  o (https://www.xe.com/themes/xe/js/react/converter.0ac411d7a1f6b0278202.min.js:1)
+  a (https://www.xe.com/themes/xe/js/react/converter.0ac411d7a1f6b0278202.min.js:1)
+  (anonymous function) (https://www.xe.com/themes/xe/js/react/converter.0ac411d7a1f6b0278202.min.js:1)
+
+  phantomjs://platform/console++.js:263 in error

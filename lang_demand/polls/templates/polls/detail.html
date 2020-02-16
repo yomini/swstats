@@ -1,0 +1,40 @@
+{% extends 'base.html' %} <!--상속받기-->
+{%block title%}poll{%endblock%}
+
+{% block content %}
+
+<div class="container">
+    <h2>Have fun!</h2>
+    <p>detail.html</p>
+    <table class="table">
+        <thead>
+            <tr>
+                <td>Id</td>
+                <td>Q.</td>
+                <td>Date</td>
+            </tr>
+        </thead>
+        <tr>
+            <td width="5%">{{q.id}}</td>  <!--views.py에서 받은 함수-->
+            <td width="50%">{{q.question_text}}</td>
+            <td width="30%">{{q.pub_date}}</td>
+        </tr>
+<!--        Question과 Choice는 1:N관계이고 외래키지정된 경우 소문자클래스명_set속성제공-->
+<!--당신은 Choice에 관한 Foreign Key를 만들어 각각의 Choice를 하나의 Question에 관계시켰다.-->
+<!--따라서, 각각의 Choice는 명시적으로 (모델에서 당신이 선언한) 하나의 Question 필드를 가지고 있다.-->
+<!--Django의 ORM은 Question에서 역방향으로 관계를 따르며, 각 인스턴스에 foo_set이라 불리는 필드를-->
+<!--자동으로 생성한다. 여기서 Foo는 해당 모델에 대한 Foreign Key 필드가 있는 모델이다.-->
+<!--choice_set 은 'Question'인스턴스와 관련된 'Choice'개체의 쿼리 세트를 만들 수 있는 -->
+<!--'RelatedManager'이다. (예: q.choice_set.all())-->
+    </table>
+</div>
+<form method="post" action="{%url 'polls:vote' q.id%}">
+    {%csrf_token%}  <!--form tag 안에 무조건 있어야함.-->
+        {% for c in q.choice_set.all %}  <!--choice클래스에 question클래스가 외래키 지정되어 있어서 vies.py에서 question 클래스만 넘겨받아도 choice안의 데이터 사용가능.  클래스명_set은 장고에서 지원하는 모듈. 위에 참고.-->
+        <div><input type="radio" name="ch" value="{{c.id}}">{{c}}</div>  <!--사용자가선택한값 name="ch"에 받아서 views에 넘김-->
+        {% endfor %}
+        <input type="submit" value="vote">
+
+</form>
+<a href="{%url 'polls:list' %}">Go back</a>
+{%endblock%}

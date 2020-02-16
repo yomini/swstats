@@ -1,0 +1,10 @@
+
+{% extends 'base.html' %}
+{% block content %}
+
+<!--언어별 수요 막대 그래프-->
+<img src="{{lv}}" id="myimage1" />
+<img src="{{s}}" id="myimage2" />
+
+{{ block.super}}
+{% endblock %}

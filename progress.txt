@@ -1,0 +1,16 @@
+2020.02.08 (JW)
+프로젝트 venv(가상환경) 변경
+    - 기존 파이썬 3.8.1 버젼을 아나콘다로 바꾸면서 Python 3.6.5 :: Anaconda, Inc.로 바꿈
+    - data folder 생성, note.txt, progress.txt, library.txt 생성
+    - 최상위 폴더 lang_demand로 변경 -> 추후 변경 가능 (rename 시 모든 체크 해제 후 rename한다.!!!!)
+    - glassdoor에서의 검색을 위한 country_code.json
+    - 개발자가 일하기 좋은(?) 나라 top 10 - country_top10.json (+ korea)
+    - 언어별 수요 - lang-demand.json
+    - top 20 프로그래밍 언어 - lang_top20.json
+    - job_demand_country는 싹 갈아 엎어야 한다.
+        -- glassdoor에서 급여 검색이 안 되는 나라가 많음
+        -- 다른 사이트를 이용하든가, glassdoor에서 다른 방법을 찾아야 한다.
+        -- 다른 사이트 예시: https://www.daxx.com/blog/development-trends/it-salaries-software-developer-trends-2019
+        -- software engineer average pay in the world로 구글 검색 시 나온 사이트
+        https://www.glassdoor.com/Salaries/company-salaries.htm?suggestCount=0&suggestChosen=false&clickSource=searchBtn&typedKeyword=software+engineer&sc.keyword=software+engineer&locT=N&locId=1&jobType=
+        -- glassdoor의 salaries 검색

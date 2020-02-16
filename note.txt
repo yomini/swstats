@@ -1,0 +1,19 @@
+데이터들은 lang_demand 밑에 data 폴더를 만들어서 저장해 놓는다.
+설치한 라이브러리들은 라이브러리.txt 파일에 추가한다.
+진행 상황에 관련된 것은 progress.txt 파일에 추가한다.
+
+컴퓨터 언어 Top 20 데이터 - https://www.tiobe.com/tiobe-index
+lang_top20 데이터를 갱신할 상황이 오면 /lang_demand/stats/stats_crawling/lang_rating 실행
+
+Top 10 countries for Software engineers / Developers/ Data Scientists to work 데이터
+더 최신의 데이터나 신뢰할 수 있는 사이트를 찾는다면 데이터를 바꾼다
+https://www.hackerearth.com/blog/developers/best-countries-software-engineers-developers-work-2017/
+
+glassdoor의 국가 코드, currency
+Switzerland - 226, Canada - 3, Australia - 16, Netherlands - 178, Germany - 96, USA - 1, Sweden - 223,
+Denmark - 63, Singapore - 271, United Kingdom - 2, South Korea - 135
+
+1. 시각화 - 누나
+2. 설문조사 - 누나
+3. 자유게시판 - 요미
+4. html 꾸미기 - 요미, 누나

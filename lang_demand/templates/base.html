@@ -1,0 +1,25 @@
+<!--CONFIG바로 아래의 TEMPLATE.-->
+<!--BLOCK을 세개로 나눠줌... -->
+<!--이거를 각 HTML에서 상속받아서 쓰면 된다..-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/winter.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <title>{% block title %}{% endblock%}</title>
+</head>
+<body>
+{% block menubar %}
+HOME  POLL  MEMBER  BOARD
+{% endblock%}
+<hr>
+{% block content %}
+{% endblock%}
+</body>
+</html>
