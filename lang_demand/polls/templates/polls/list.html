@@ -4,26 +4,22 @@
 {% block content %}
 
 <div class="container">
-    <h2>Fun polls</h2>
+    <h2>Software Developer Survey</h2>
     <p>polls/list.html</p>
     <table class="table">
-        <thead>
-            <tr>
-                <td>Id</td>
-                <td>Q.</td>
-                <td>Date</td>
-            </tr>
-        </thead>
         {% for q in qs %}
         <tr>
-            <td width="5%">{{q.id}}</td>  <!--views.py에서 받은 함수-->
-            <td width="50%"><a href="{% url 'polls:detail' q.id %}">{{q.question_text}}</a></td>
-            <td width="30%">{{q.pub_date}}</td>
+            <td width="50%">{{q.id}}{{q.question_text}}</td>
         </tr>
+        <tr>
+            {% for c in q.choice_set.all %}  <!--choice클래스에 question클래스가 외래키 지정되어 있어서 vies.py에서 question 클래스만 넘겨받아도 choice안의 데이터 사용가능.  클래스명_set은 장고에서 지원하는 모듈. 위에 참고.-->
+            <td width="30%">{{c.choice_text}}</td>
+            <td width="30%">{{c.votes}}</td>
+        </tr>
+        {% endfor %}
         {% endfor %}
 
     </table>
 </div>
 
-<a href="{%url 'polls:list' %}">Go back</a>
 {%endblock%}

@@ -9,5 +9,5 @@
 {{c.choice_text}}
 {{c.votes}}
 {% endfor %}
-<a href="{% url 'polls:detail' q.id %}">vote again</a>
+<a href="{% url 'polls:list' q.id %}">Find out survey result</a>
 {%endblock%}
