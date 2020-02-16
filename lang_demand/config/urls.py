@@ -22,4 +22,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),  # http://localhost:8000/ 뒤에 admin/붙으면 admin.site.urls 실행(장고에서 만든사이트)
     path('polls/', include('polls.urls')),  # http://localhost:8000/뒤에 polls/가 붙으면 polls 밑에 url를 실행
     path('stats/', include('stats.urls')),
+    path('board/', include('board.urls')),
 ]

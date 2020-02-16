@@ -11,4 +11,3 @@
  - chromedriver 설치 (최신버전) - 셀리니움 사용 위함
  - https://phantomjs.org/download.html 설치 (selenium사용위함)
  - mysqlclient 라이브러리 설치 (오류 시 알아서 해결)
- - 라이브러리
