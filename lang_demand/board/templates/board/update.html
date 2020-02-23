@@ -4,6 +4,7 @@
 <div class="container">
     <h2>Board View</h2>
     <form action="." method="post">
+    {% csrf_token %}
     <div class="form-group row">
         <div class="col-md-1">
             <label for="id">글번호:</label>

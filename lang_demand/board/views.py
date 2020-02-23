@@ -39,5 +39,27 @@ def BoardView(request, board_id):
     return render(request, 'board/view.html', {'b': bview})
 
 
+def BoardUpdate(request, board_id):
+    if request.method == 'GET':
+        bupdate = Board.objects.get(id=board_id)
+        return render(request, 'board/update.html', {'dto': bupdate})
+
+    elif request.method == 'POST':
+        title = request.POST['title']
+        content = request.POST['content']
+        writeDate = datetime.today()
+
+        bupdate = Board(
+            title=title,
+            content=content,
+            writeDate=writeDate
+        )
+
+        result = bupdate.save()
+        print('=' * 60)
+        print(result)
+
+        return HttpResponseRedirect(reverse('board:board_view', args={board_id, }))
+
 
 
