@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %}Board:List{% endblock %}
+{% block content %}
+<h2>board.list.html</h2>
+<div class="container">
+    <h2>Board List</h2>
+    <div class="list-group">
+        <ul class="list-group">
+            <li class="list-group-item active">
+                <sapn>글번호&nbsp;&nbsp;작성자</sapn><span class="badge">조회수</span>
+                <div><span>제목</span></div>
+            </li>
+        {% for b in bl %}
+            <li class="list-group-item">
+                <span class="badge">{{ b.hit }}</span>
+                <div class="list-tag">
+                    <span>{{ b.id }}.</span>&nbsp;<span>{{ b.writer }}</span>
+                </div>
+                <h5 class="list-group-item-heading">
+                    <a href="{% url 'board:board_view' b.id %}">{{ b.title }}</a>
+                </h5>
+            </li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div>
+        <a href="{% url 'board:board_write' %}"><button class="btn btn-default">등록</button></a>
+    </div>
+</div>
+{% endblock%}

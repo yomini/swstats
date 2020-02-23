@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% block title %}Board:View{% endblock %}
+{% block content %}
+<div class="container">
+    <h2>Board View</h2>
+    <form action="." method="post">
+    {% csrf_token %}
+    <div class="form-group row">
+        <div class="col-md-1">
+            <label for="id">글번호:</label>
+            <input type="text" class="form-control" id="id" name="id" value="{{ dto.id }}"/>
+        </div>
+    </div>
+    <div class="from-gruop row">
+        <div class="col-md-2">
+            <label for="writer">작성자:</label>
+            <input type="text" class="form-control" id="writer" name="writer" value="{{ dto.writer }}"/>
+        </div>
+    </div>
+    <div class="form-group">
+        <label for="title">제목:</label>
+        <input type="text" class="form-control" id="title" name="title" value="{{ dto.title }}"/>
+    </div>
+    <div class="form-group">
+        <label for="content">내용:</label>
+        <textarea class="form-control" id="content" name="content" rows="10" cols="30">{{ dto.content }}</textarea>
+    </div>
+<!--    <div class="form-group" id="pwdDiv">-->
+<!--        <label for="pwd">비밀번호:</label>-->
+<!--        <input type="text" class="form-control" id="pwd" name="pwd"/>-->
+<!--    </div>-->
+    <div>
+        <a href="{% url 'board:board_list' %}">
+            <button type="button">목록</button>
+        </a>
+        <a href="{% url 'board:board_update' b.id %}">
+            <button id="updateBtn">수정</button>
+        </a>
+        <a href="#">
+            <button type="button">삭제</button>
+        </a>
+    </div>
+    </form>
+</div>
+
+{% endblock %}
