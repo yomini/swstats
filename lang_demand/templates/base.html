@@ -16,7 +16,11 @@
 </head>
 <body>
 {% block menubar %}
-HOME  POLL  MEMBER  BOARD
+<a href="{% url 'home'%}">HOME &nbsp;</a>
+<a href="{% url 'polls:list'%}">POLLS &nbsp; </a>
+<a href="{% url 'stats:stats'%}">STATISTICS &nbsp; </a>
+BOARD
+
 {% endblock%}
 <hr>
 {% block content %}

@@ -3,13 +3,19 @@
 
 {% block content %}
 
-<div class="container">
+<div class="container" xmlns="http://www.w3.org/1999/html">
     <h2>Software Developer Survey</h2>
-    <p>polls/list.html</p>
+    <p>Take a look at the survey results. If you want to participate,
+        <a href="{%url 'polls:vote'%}">click here</a></p><br/>
+
     <table class="table">
         {% for q in qs %}
         <tr>
-            <td width="50%">{{q.id}}{{q.question_text}}</td>
+            <td width="50%"><b>{{q.id}}. {{q.question_text}}</b></td>
+        </tr>
+        <tr>
+            <td><b>Answer</b></td>
+            <td><b>vote</b></td>
         </tr>
         <tr>
             {% for c in q.choice_set.all %}  <!--choice클래스에 question클래스가 외래키 지정되어 있어서 vies.py에서 question 클래스만 넘겨받아도 choice안의 데이터 사용가능.  클래스명_set은 장고에서 지원하는 모듈. 위에 참고.-->
@@ -18,8 +24,6 @@
         </tr>
         {% endfor %}
         {% endfor %}
-
     </table>
 </div>
-
 {%endblock%}

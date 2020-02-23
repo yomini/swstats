@@ -22,7 +22,7 @@ def langvis():
 
 
     # barh: horizontal bar plot 그리기
-    fig = plt.figure()
+    fig = plt.figure(figsize=(10,5))
     plt.barh(yLangs, xDemands)
     plt.title('Programming Language Profession Demand')
     plt.xlabel('Job Demand')

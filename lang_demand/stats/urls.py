@@ -20,5 +20,5 @@ from . import views
 app_name = "stats"  # 이름 충돌 방지 위해 앱이름 공간 지정
 
 urlpatterns = [
-    path('', views.language, name='language')
+    path('', views.language, name='stats')
 ]
