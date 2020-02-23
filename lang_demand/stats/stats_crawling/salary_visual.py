@@ -25,7 +25,7 @@ def sal_vis():
     # print(country)
     # print(wage_dollor)
 
-    fig = plt.figure(figsize=(10,5))
+    fig = plt.figure(figsize=(10,8))
     plt.bar(country, wage_dollor, align="center", width=0.6 )
     plt.title('Software Developer Salaries in the World')
     plt.xlabel('Country')
@@ -44,4 +44,4 @@ def sal_vis():
     return uri
 
 
-# sal_vis()
+sal_vis()

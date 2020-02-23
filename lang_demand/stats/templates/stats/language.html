@@ -1,10 +1,30 @@
+<style type="text/css">
+    #title{font-size: 30px;
+     font-weight: bold}
+    #detail{font-size: 20px;
+     font-weight: bold}
+
+</style>
 
 {% extends 'base.html' %}
+
 {% block content %}
+<div class="container">
+    <h2><b>Statistics on Software Engineer Profession</b></h2>
+    <h3>We made some statistics regarding Software Engineer profession. <br/>
+        data was crawled from glassdoor.com by Beautifulsoup, library provided by python.
+        Please take a look and enjoy!</h3><br/><br/>
+    <!--언어별 수요 막대 그래프-->
 
-<!--언어별 수요 막대 그래프-->
-<img src="{{lv}}" id="myimage1" />
-<img src="{{s}}" id="myimage2" />
+    <div id="title">1. Programming language demand</div>
+    <div id="detail"></div>
+    <img src="{{lv}}" id="myimage1"/><br/><br/><br/><br/><br/><br/>
 
+    <div id="title">2. Salaries per Country</div><br/>
+    <div id="detail">These are top 10 countries with highest salaries for software engineer profession.</div><br/>
+
+    <img src="{{s}}" id="myimage2"/>
+
+</div>
 {{ block.super}}
 {% endblock %}

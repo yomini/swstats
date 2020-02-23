@@ -3,11 +3,19 @@
 {%block content%}
 <h2>polls/vote.html</h2>
 <p/>
-<div>{{q.question_text}}</div>
-<p/>
-{% for c in q.choice_set.all %}
-{{c.choice_text}}
-{{c.votes}}
-{% endfor %}
-<a href="{% url 'polls:detail' q.id %}">vote again</a>
+<form method="post" action="{% url 'polls:list' %}">
+    {% for q in qss %}
+    <div>{{q.question_text}}</div>
+    <p/>
+    <div class="list-group">
+        {% for c in q.choice_set.all %}
+        <li class="list-group-item"><input type="radio" name="{{id}}ch"> {{c.choice_text}}</li>
+        {% endfor %}
+    </div>
+    {% endfor %}
+    <div>
+        <button><a href="{% url 'polls:list' %}">Submit</a></button>
+        <a href="{% url 'polls:list' %}">Find out survey result</a>
+    </div>
+</form>
 {%endblock%}

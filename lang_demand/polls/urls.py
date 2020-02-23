@@ -20,10 +20,7 @@ from . import views
 app_name = "polls"  # 이름 충돌 방지 위해 앱이름 공간 지정
 
 urlpatterns = [
-    path('', views.list, name="list"),  # http://localhost:8000/polls/ 뒤에 아무것도 안나오면  views.py안의 list 실행해라
-    path('test/', views.test, name="test"),  #polls뒤에 test/가 붙으면 views.py안의 test함수 실행
-    path('insert/', views.insert, name="insert"),  # http://localhost:8000/polls/뒤에 insert/가 붙으면 views.insert 수행해라
-    path('<int:question_id>/', views.detail, name='detail'),  # http://127.0.0.1:8000/1
-    path('<int:question_id>/vote/', views.vote, name='vote'),  # http://127.0.0.1:8000/polls/1
+    path('', views.vote, name="vote"),  # http://localhost:8000/polls/ 뒤에 아무것도 안나오면  views.py안의 list 실행해라
+    path('list', views.list, name="list"),  # http://localhost:8000/polls/ 뒤에 아무것도 안나오면  views.py안의 list 실행해라
 
 ]
